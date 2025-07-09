@@ -11,12 +11,13 @@
       Enrollment Details
     </h3>
 
-    <form style="font-family: Arial; margin-left: 20px; font-weight: bold">
+    <form style="font-family: Arial; margin-left: 20px; font-weight: bold" action="upload.php" method="post" enctype="multipart/form-data">
       <label>Full Name</label><br />
       <input
         type="text"
         placeholder="Enter full name"
         style="margin-bottom: 10px"
+        required
       /><br />
 
       <label>Email</label><br />
@@ -24,6 +25,7 @@
         type="email"
         placeholder="example@gmail.com"
         style="margin-bottom: 10px"
+        required
       /><br />
 
       <label>Password</label><br />
@@ -31,18 +33,26 @@
         type="password"
         placeholder="Create a password"
         style="margin-bottom: 10px"
+        required
       /><br />
 
       <label>Date of Birh</label><br />
-      <input type="date" style="margin-bottom: 10px" /><br />
+      <input type="date" style="margin-bottom: 10px" required /><br />
 
       <label>Age</label><br />
-      <input type="number" style="margin-bottom: 10px" /><br />
+      <input type="number" style="margin-bottom: 10px" required /><br />
 
       <label>Gender</label><br />
-      <input type="radio" value="Male" />
-      <input type="radio" value="Female" />
-      <input type="radio" value="other" style="margin-bottom: 10px" /><br />
+      <input type="radio" value="Male" name="Gender" />
+      <input type="radio" value="Female" name="Gender" />
+      <input
+        type="radio"
+        value="other"
+        style="margin-bottom: 10px"
+        name="Gender"
+      />
+      <br />
+      <input required />
 
       <label>Select Class</label><br />
       <select>
@@ -55,14 +65,26 @@
         <option>class1</option></select
       ><br />
 
-      <label <style="margin-top:10px">Subjects Interested in</label><br />
-      <label> apple<input type="checkbox" value="English" /></label>
-      <input type="checkbox" value="Math" />
-      <input
-        type="checkbox"
-        value="Science"
-        style="margin-bottom: 10px"
-      /><br />
+      <label style="margin-top: 10px">Subjects Interested in</label><br />
+      <label>
+        english<input
+          type="checkbox"
+          value="English"
+          name="Subjects Interested in"
+      /></label>
+      <label>
+        computer<input
+          type="checkbox"
+          value="Math"
+          name="Subjects Interested in"
+      /></label>
+      <label
+        >math<input
+          type="checkbox"
+          value="Science"
+          style="margin-bottom: 10px"
+          name="Subjects Interested in" /></label
+      ><br />
 
       <label>Phone number</label><br />
       <input
@@ -85,7 +107,7 @@
       <input type="color" style="height: 2%; width: 200px" /><br />
 
       <input
-        type="button"
+        type="submit"
         value="Submit Form"
         style="
           background-color: #1763ba;
