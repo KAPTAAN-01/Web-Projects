@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+
+
+    <style>
+    .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4,850px);
+  
+   font-family: sans-serif;
+}
+.header{
+      
+     background-color: #1f1d1d;
+     text-align: center;
+     grid-column: 1 / span 3;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+.main{
+    height: 850px;
+      place-items: center; 
+     background-color: #000000;
+     text-align: center;
+     color: antiquewhite;
+    
+     grid-column: 1 / span 3;
+       display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+.main  .small-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      
+      justify-content: center;   
+      align-items: center;       
+      margin-top: 50px;          
+    }
+
+    .small-grid div {
+      width: 120px;
+      height: 250px;
+      background-color: #333;
+      border-radius: 5px;
+    }
+    .footer{
+        height: 400px;
+      place-items: center; 
+     background-color: #000000;
+     text-align: center;
+     color: antiquewhite;
+    
+     grid-column: 1 / span 3;
+       display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    }
+    
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .header, .main {
+    grid-column: 1 / span 2;
+  }
+
+  .grid-item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .header, .main, .grid-item {
+    grid-column: 1 / span 1;
+  }
+
+  .header, .main {
+    padding: 20px;
+  }
+
+  .grid-item {
+    height: 120px;
+    font-size: 14px;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <div class="grid-container">
+  <div class="header">
+    <h1 style="color: aqua;">Hi, I'm Muhammad Awais</h1>
+    <h3 style="color: white;">I am frontend developer</h3>
+    <a href="https://www.github.com"><button style="border-radius: 18px;padding: 5px;background-color: aqua;">see projects</button></a>
+  </div>
+  <div class="main">
+   <h2 style="color: aqua;">About me</h2>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sequi suscipit eligendi<br> rerum animi, iste a nam, minus, maiores sint sunt unde? Amet iure similique praesentium enim!<br> Nihil ipsa delectus labore expedita porro reprehenderit?</p>
+   <h2 style="color: aqua;">Projects</h2>
+   <div class="small-grid">
+    <div><h2 style="color: aqua;">Developer Portfolio</h2>
+    <h3>Modern glassmorphism Portfolio design using HTML &  CSS</h3></div>
+    <div><h2 style="color: aqua;">Dashboard UI</h2>
+    <h3>Admin panel with custom grid & chart integration</h3></div>
+    <div><h2 style="color: aqua;">Typing speed APP</h2>
+    <h4>JS typing app with WPM score & dark mode</h4></div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <h2 style="color: aqua;">Contact Me</h2>
+    <h3 style=" color: rgb(14, 71, 104);border: 2ps solid black;padding: 30px;background-color: bisque;border-radius: 5px;">Email <br> ma0541366@gmail.com</h3>
+    <h3 style=" color: rgb(14, 71, 104);border: 2ps solid black;padding: 30px;background-color: bisque;border-radius: 5px;">Phone <br> +92 332 1534101</h3>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>
