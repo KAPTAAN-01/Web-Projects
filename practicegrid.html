@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Grid Practice</title>
+    <style>
+      .container {
+        display: grid;
+        height: 200vh;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 0.7fr 0.5fr 0.2fr;
+        grid-template-areas: "nav nav nav nav "
+        "a main main main"
+        "a b c d"
+        "a footer footer footer";
+        text-align: center;
+        font-size: 30px;
+        color: white;
+      }
+      @media only screen and (max-width: 786px){
+        .container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.3fr 0.7fr 0.5fr 0.4fr o.4fr o.4fr 0.2fr;
+            grid-template-areas: "nav"
+                                 "main"
+                                 "a"
+                                 "b"
+                                 "c"
+                                 "d"
+                                 "footer"    ;
+        }
+      }
+        nav {
+          background-color: rgb(66, 160, 241);
+          grid-area: nav;
+        }
+
+        main {
+          background-color: rgb(138, 96, 41);
+          grid-area: main;
+        }
+
+        .box1{
+          background-color: aquamarine;
+          grid-area: a;
+        }
+        .box2{
+            background-color: rgb(85, 55, 19);
+            grid-area: b;
+        }
+        .box3{
+            background-color: rgb(43, 31, 13);
+            grid-area: c;
+        }
+        .box4{
+            background-color: aqua;
+            grid-area: d;
+        }
+         
+        .f{
+          background-color: rgb(253, 253, 0);
+          grid-area:footer;
+        }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>nav</nav>
+      <main>main</main>
+      <div class="box1">a</div>
+      <div class="box2">b</div>
+      <div class="box3">c</div>
+      <div class="box4">d</div>
+      <div class="f">footer</div>
+    </div>
+  </body>
+</html>
