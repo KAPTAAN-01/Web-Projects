@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .signin-button {
+      background-color: white;
+      color: #007bff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-box {
+      background: #e9f1ff;
+      border-left: 6px solid #007bff;
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+
+    .modal-content input[type="text"],
+    .modal-content input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .modal-content button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My E-Commerce Store</h1>
+    <button class="signin-button" onclick="openModal()">Sign In</button>
+  </header>
+
+  <div class="container">
+    <h2>🛍️ Key Functional Sections</h2>
+    <div class="features">
+      <div class="feature-box">👟 Shoes</div>
+      <div class="feature-box">👗 Women</div>
+      <div class="feature-box">⌚ Watches</div>
+      <div class="feature-box">🧢 Men</div>
+      <div class="feature-box">🎧 Electronics</div>
+      <div class="feature-box">🔥 Trending</div>
+      <div class="feature-box">📦 Featured Products</div>
+      <div class="feature-box">❤️ Wishlist</div>
+      <div class="feature-box">📜 Order History</div>
+      <div class="feature-box">🔐 Secure Checkout</div>
+    </div>
+  </div>
+
+  <!-- Modal Sign In Form -->
+  <div id="signinModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Sign In</h3>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("signinModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("signinModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      let modal = document.getElementById("signinModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

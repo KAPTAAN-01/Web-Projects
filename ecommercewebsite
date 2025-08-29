@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend eCommerce Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My eShop</h1>
+    <nav>
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
+      <a href="#cart">Cart (0)</a>
+      <a href="#wishlist">Wishlist</a>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <section id="search">
+    <input type="text" placeholder="Search for products..." />
+    <button>Search</button>
+  </section>
+
+  <!-- Product Listing -->
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <h3>Smartphone</h3>
+      <p>$499</p>
+      <button>Add to Cart</button>
+      <button>Add to Wishlist</button>
+      <p>⭐⭐⭐⭐☆ (120)</p>
+    </div>
+    <!-- Repeat for more products -->
+  </section>
+
+  <!-- Shopping Cart -->
+  <section id="cart">
+    <h2>Shopping Cart</h2>
+    <p>No items in cart.</p>
+  </section>
+
+  <!-- Checkout -->
+  <section id="checkout">
+    <h2>Checkout</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="text" placeholder="Address" required />
+      <select>
+        <option>Cash on Delivery</option>
+        <option>PayPal</option>
+        <option>Credit Card</option>
+      </select>
+      <button>Place Order</button>
+    </form>
+  </section>
+
+  <!-- Register/Login Forms -->
+  <section id="register">
+    <h2>Create Account</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button>Register</button>
+    </form>
+  </section>
+
+  <section id="login">
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button>Login</button>
+    </form>
+    <button>Login with Google</button>
+    <button>Login with Facebook</button>
+  </section>
+
+  <!-- Admin Dashboard (Frontend only) -->
+  <section id="admin">
+    <h2>Admin Dashboard</h2>
+    <p>Upload product, manage inventory, view orders</p>
+    <!-- Just frontend layout -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My eShop | Terms | Privacy</p>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
