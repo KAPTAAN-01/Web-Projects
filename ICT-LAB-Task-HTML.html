@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>M.Awais/LoginForm</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      background-image: url("C:/Users/MUHAMMAD AWAIS/Desktop/bg1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .box {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        padding-right: 55px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(5px);
+        .input {
+          width: 100%;
+          padding: 12px;
+          margin: 8px 0 15px 0;
+          border-radius: 6px;
+          border: none;
+          outline: none;
+
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(6px);
+          color: rgb(255, 255, 255);
+        }
+        .button {
+          width: 100%;
+          padding: 12px;
+          margin: 8px 0 15px 0;
+          border-radius: 6px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(6px);
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+        <form action="Submit.html" method="post">
+          <h3 style="text-align: center">Login</h3>
+          <label>First Name:</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="First Name"
+            required
+          /><br />
+
+          <label>Last Name:</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Last Name"
+            required
+          /><br />
+
+          <label>Age:</label>
+          <input class="input" type="number" placeholder="Age" required /><br />
+
+          <label>Image</label>
+          <input class="input" type="file" accept="image/*" required /><br />
+
+          <label>Gender</label><br />
+
+          <div class="gender-box">
+            <label>
+              <input type="radio" name="gender" value="male" required />
+              Male
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="female" required />
+              Female
+            </label>
+
+            <label>
+              <input type="radio" name="gender" value="other" required />
+              Other
+            </label>
+          </div>
+          <br />
+
+          <label>E-Mail</label>
+          <input
+            class="input"
+            type="email"
+            placeholder="E-Mail"
+            required
+          /><br />
+
+          <label>Password</label>
+          <input
+            class="input"
+            type="password"
+            placeholder="Password"
+            required
+          /><br />
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
