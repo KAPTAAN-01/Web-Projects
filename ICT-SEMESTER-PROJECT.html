@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT-PROJECT</title>
+</head>
+ <style>
+    body {
+      background-image: url("C:/Users/MUHAMMAD AWAIS/Desktop/bg1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+     
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      visibility: visible;
+      overflow:visible;
+    }
+     
+
+    .box {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        padding-right: 55px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(5px);
+        margin-top: 50px;
+        .input {
+          
+          padding: 12px;
+          margin: 8px 0 15px 0;
+          border-radius: 6px;
+          border: none;
+          outline: none;
+
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(6px);
+          color: rgb(255, 255, 255);
+        }
+        .button {
+          width: 100%;
+          padding: 12px;
+          margin: 8px 0 15px 0;
+          border-radius: 6px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(6px);
+          color: rgb(255, 255, 255);
+        }
+    }
+    
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+        <form action="Submit.html" method="post">
+          <h3 style="text-align: center">Login</h3>
+          <label>Item Name:</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Fi Name"
+            required
+          />
+          <label>Supplier Name:</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Supplier Name"
+            required><br>
+
+          <label>Item Category:</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Item Category"
+            required
+          /><br />
+
+          <label>Item Code:</label>
+          <input class="input" type="text" placeholder="Item Code" required /><br />
+
+          <label>Image</label>
+          <input class="input" type="file" accept="image/*" required /><br />
+
+          <label>Brand/Compony:</label>
+            <input
+                class="input"
+                type="text"
+                placeholder="Brand/Compony"
+                required
+                ><br />
+
+          <label>Quantity Purchased:</label>
+            <input
+                class="input"
+                type="number"
+                placeholder="Quantity Purchased"
+                required><br />
+                <label>Cost Price:</label>
+          <input
+            class="input"
+            type="number"
+            placeholder="Cost Price"
+            required
+          /><br />
+
+          <label>Retail Price:</label>
+          <input
+            class="input"
+            type="number"
+            placeholder="Retail Price"
+            required
+          /><br />
+          
+
+            <label>Purchase Date:</label>
+            <input
+                class="input"
+                type="date"
+                placeholder="Purchase Date"
+                required><br />
+            <label>Expiry Date:</label>
+            <input
+                class="input"
+                type="date"
+                placeholder="Expiry Date"
+                required><br />
+            
+            <label>Location in Store:</label>
+            <input
+                class="input"
+                type="text"
+                placeholder="Location in Store"
+                ><br />
+
+            <label>Item Description</label>
+            <input
+                class="input"
+                type="text"
+                placeholder="Item Description"
+                ><br />
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
